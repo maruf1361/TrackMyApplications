@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TrackMyApplications</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>TrackMyApplications</h1>
+    </header>
+
+    <main>
+      <!-- Dashboard Overview Section -->
+      <section id="dashboard-overview">
+        <h2>Dashboard Overview</h2>
+        <div id="statistics">
+          <div class="stat-item">
+            <span id="total-applications">0</span>
+            <span>Total Applications</span>
+          </div>
+          <div class="stat-item">
+            <span id="applications-pending">0</span>
+            <span>Applications Pending</span>
+          </div>
+          <div class="stat-item">
+            <span id="interviews-scheduled">0</span>
+            <span>Interviews Scheduled</span>
+          </div>
+          <div class="stat-item">
+            <span id="offers-received">0</span>
+            <span>Offers Received</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Add New Job Application Section -->
+      <section id="job-form">
+        <h2>Add New Job Application</h2>
+        <form id="new-job-form">
+          <input
+            type="text"
+            id="company-name"
+            placeholder="Company Name"
+            required
+          />
+          <input
+            type="text"
+            id="position-title"
+            placeholder="Position Title"
+            required
+          />
+          <input
+            type="date"
+            id="application-date"
+            placeholder="Application Date"
+            required
+          />
+          <input
+            type="url"
+            id="job-link"
+            placeholder="Job Description Link (URL)"
+            required
+          />
+          <select id="status">
+            <option value="Applied">Applied</option>
+            <option value="Interviewing">Interviewing</option>
+            <option value="Offered">Offered</option>
+            <option value="Rejected">Rejected</option>
+          </select>
+          <button type="submit">Add Application</button>
+        </form>
+      </section>
+
+      <!-- Job Applications List Section -->
+      <section id="job-list">
+        <h2>Applications</h2>
+        <!-- Filter and Sorting Section -->
+        <section id="filter-sort">
+          <div>
+            <label for="filter-status">Filter by Status:</label>
+            <select id="filter-status">
+              <option value="">All</option>
+              <option value="Applied">Applied</option>
+              <option value="Interviewing">Interviewing</option>
+              <option value="Offered">Offered</option>
+              <option value="Rejected">Rejected</option>
+            </select>
+          </div>
+          <div>
+            <label for="sort-by">Sort by:</label>
+            <select id="sort-by">
+              <option value="dateApplied">Date Applied</option>
+              <option value="company">Company</option>
+            </select>
+            <button id="sort-asc">Asc</button>
+            <button id="sort-desc">Desc</button>
+          </div>
+        </section>
+        <!-- Search Bar -->
+        <div id="search-container">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search by company or position..."
+            onkeyup="searchTable()"
+          />
+        </div>
+
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Company Name</th>
+                <th>Position Title</th>
+                <th>Application Date</th>
+                <th>Status</th>
+                <th>Job Link</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="applications-table-body"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <!-- Notes Modal -->
+    <div id="notesModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Edit Notes</h2>
+        <textarea id="notesText" rows="5"></textarea>
+        <button id="saveNotes">Save Notes</button>
+      </div>
+    </div>
+
+    <footer>
+      <p>TrackMyApplications &copy; 2023</p>
+      <p>by Maruf Bin Faruque</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

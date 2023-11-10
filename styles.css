@@ -1,0 +1,340 @@
+
+
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Typography */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+}
+
+/* Header and Footer */
+header, footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+/* Dashboard Overview styles */
+#dashboard-overview {
+    padding: 1em;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    margin-bottom: 2em;
+}
+
+#statistics {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    flex-basis: calc(25% - 20px);
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.stat-item span:first-child {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .stat-item {
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .stat-item {
+        flex-basis: 100%;
+    }
+}
+
+/* Main styling */
+main {
+    padding: 1em;
+}
+
+#job-form, #job-list {
+    margin-bottom: 2em;
+}
+
+
+/* Form styling */
+form > input, form > select, form > button {
+    display: block;
+    width: 100%; 
+    padding: 10px; 
+    margin: 10px 0; 
+    box-sizing: border-box; 
+    border: 1px solid #ddd; 
+    border-radius: 4px; 
+}
+
+#job-form {
+    width: 100%; 
+    
+}
+
+
+@media (min-width: 1200px) {
+    #job-form {
+        width: 100%; 
+        margin: auto; 
+    }
+}
+
+
+/* Button styling */
+button {
+    padding: 0.5em 1em;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+/* Table styling */
+.table-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 0.5em;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+td a {
+    color: #06c;
+    text-decoration: none;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+/* Delete button styling */
+.delete-btn {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 0.2em 0.5em;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #c9302c;
+}
+
+/* Footer positioning */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px; 
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px; 
+}
+
+/* Filter and Sort Section - Default styles for desktop */
+#filter-sort {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+#filter-sort div {
+    display: flex;
+    align-items: center;
+}
+
+#filter-sort label {
+    margin-right: 0.5em;
+}
+
+#filter-sort select, #sort-asc, #sort-desc {
+    padding: 0.5em;
+    margin-right: 1em;
+}
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 768px) {
+    /* Stack filter and sort options vertically on smaller screens */
+    #filter-sort {
+        flex-direction: column;
+        align-items: stretch; 
+    }
+
+    #filter-sort div {
+        width: 100%; 
+        margin-bottom: 10px; 
+    }
+
+    #filter-sort select, #sort-asc, #sort-desc {
+        width: 100%; 
+        margin-right: 0; 
+    }
+}
+
+#sort-asc, #sort-desc {
+    padding: 0.5em 1em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#sort-asc:hover, #sort-desc:hover {
+    background-color: #0056b3;
+}
+
+/* search bar */
+#search-container {
+    margin: 1em;
+    text-align: center;
+}
+
+#search-input {
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 1em; 
+    font-size: 1em;
+}
+
+/* Modal styles */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#notesText {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* status edit button in table row */
+.edit-btn, .save-btn {
+    padding: 0.3em 0.6em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: 0.85em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.edit-btn:hover, .save-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Additional styling for buttons in the status cell */
+.status-cell button {
+    display: inline-block; 
+    vertical-align: middle;
+}
+
+.status-cell select {
+    padding: 0.3em 0.6em;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-right: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.status-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 180px; 
+}
+
+.status-text {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.edit-btn, .save-btn {
+    /* Button styles */
+}
+
+.status-select {
+    flex-grow: 1;
+}
+
+
+

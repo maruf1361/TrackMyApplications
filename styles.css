@@ -1,20 +1,15 @@
-
-
-/* Basic reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Typography */
 body {
     font-family: Arial, sans-serif;
     background-color: white;
     color: black;
 }
 
-/* Header and Footer */
 header, footer {
     background-color: #333;
     color: white;
@@ -53,7 +48,6 @@ header, footer {
     margin-bottom: 5px;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .stat-item {
         flex-basis: calc(50% - 20px);
